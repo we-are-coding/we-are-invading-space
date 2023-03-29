@@ -11,9 +11,9 @@ export default class Player {
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height - 75;
     this.width = 50;
-    this.height = 48;
+    this.height = 50;
     this.image = new Image();
-    this.image.src = "images/we-are-logo.png";
+    this.image.src = "images/logo.svg";
 
     document.addEventListener("keydown", this.keydown);
     document.addEventListener("keyup", this.keyup);
@@ -49,25 +49,25 @@ export default class Player {
   }
 
   keydown = (event) => {
-    if (event.code == "ArrowRight") {
+    if (event.code === "ArrowRight") {
       this.rightPressed = true;
     }
-    if (event.code == "ArrowLeft") {
+    if (event.code === "ArrowLeft") {
       this.leftPressed = true;
     }
-    if (event.code == "Space") {
+    if (event.code === "Space") {
       this.shootPressed = true;
     }
   };
 
   keyup = (event) => {
-    if (event.code == "ArrowRight") {
+    if (event.code === "ArrowRight") {
       this.rightPressed = false;
     }
-    if (event.code == "ArrowLeft") {
+    if (event.code === "ArrowLeft") {
       this.leftPressed = false;
     }
-    if (event.code == "Space") {
+    if (event.code === "Space") {
       this.shootPressed = false;
     }
   };
