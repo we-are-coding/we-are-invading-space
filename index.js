@@ -5,8 +5,8 @@ import BulletController from "./BulletController.js";
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
-canvas.width = 600;
-canvas.height = 900;
+canvas.width = 700;
+canvas.height = 800;
 
 const background = new Image();
 background.src = "images/space.png";
