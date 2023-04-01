@@ -38,6 +38,7 @@ function game() {
 function displayGameOver() {
   if (isGameOver) {
     document.getElementById("game").style.display = "none";
+    document.getElementById("instruction").style.display = "none";
     if (didWin) {
       document.getElementById("win").style.display = "unset";
     } else {

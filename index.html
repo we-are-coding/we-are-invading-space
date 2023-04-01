@@ -1,62 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>we are invading space</title>
-    <link rel="shortcut icon" href="#" />
+    <link rel="shortcut icon" href="#"/>
     <style>
-      .message {
-        color: white;
-        font-family: "Oakes Grotesk", sans-serif;
-        text-align: center;
-        max-width: 900px;
-      }
+        @media only screen and (max-width: 799px) {
+            .main-content {
+                display: none;
+            }
 
-      .message h1 {
-        font-size: 3.5em;
-      }
+            .small-screen {
+                display: block;
+            }
+        }
 
-      .message p {
-        font-size: 2em;
-      }
+        @media only screen and (min-width: 800px) {
+            .small-screen {
+                display: none;
+            }
+        }
 
-      .message a {
-        color: white;
-      }
+        .message {
+            color: white;
+            font-family: "Oakes Grotesk", sans-serif;
+            text-align: center;
+            max-width: 900px;
+            padding: 1em;
+        }
 
-      .message a:hover {
-        color: white;
-      }
+        .message h1 {
+            font-size: 3.5em;
+        }
 
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        height: 100vh;
-        background: url("images/space.png");
-      }
+        .message p {
+            font-size: 2em;
+        }
+
+        .message a {
+            color: white;
+        }
+
+        .message a:hover {
+            color: white;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            background: url("images/space.png");
+        }
     </style>
-  </head>
-  <body>
-  <div class="message">
-    <div id="win" style="display: none">
-      <h1>You won!</h1>
-      <p>Do you want to keep winning by building innovative software-products? Have a look on <a href="https://www.we-are.be">our website</a> to see how we can help you!</p>
-      <a href=".">play again</a>
+</head>
+<body>
+<div class="small-screen">
+    <div class="message">
+        <p>The game is currently not playable on small device screens.</p>
     </div>
-    <div id="lose" style="display: none">
-      <h1>You lost!</h1>
-      <p>Do you want to know how not to lose using innovative software-products? Have a look on <a href="https://www.we-are.be">our website</a> to see how we can help you!</p>
-      <a href=".">play again</a>
-
+</div>
+<div class="main-content">
+    <div class="message">
+        <p id="instruction">Use your arrow keys (left, right) to move, and space key to shoot.</p>
+        <div id="win" style="display: none">
+            <h1>You won!</h1>
+            <p>Do you want to keep winning by building innovative software-products? Have a look on <a
+                    href="https://www.we-are.be">our website</a> to see how we can help you!</p>
+            <a href=".">play again</a>
+        </div>
+        <div id="lose" style="display: none">
+            <h1>You lost!</h1>
+            <p>Do you want to know how not to lose using innovative software-products? Have a look on <a
+                    href="https://www.we-are.be">our website</a> to see how we can help you!</p>
+            <a href=".">play again</a>
+        </div>
     </div>
-  </div>
     <canvas id="game"></canvas>
     <script type="module" src="index.js"></script>
-  </body>
+</div>
+</body>
 </html>
