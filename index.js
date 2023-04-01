@@ -6,7 +6,7 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
 canvas.width = 700;
-canvas.height = 800;
+canvas.height = 750;
 
 const background = new Image();
 background.src = "images/space.png";
